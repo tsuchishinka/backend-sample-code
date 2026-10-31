@@ -1,0 +1,9 @@
+services:
+  jaeger:
+    container_name: jaeger
+    image: jaegertracing/jaeger:latest
+    ports:
+      - "127.0.0.1:16686:16686"
+      - "127.0.0.1:4318:4318"
+    volumes:
+      - .:/app
