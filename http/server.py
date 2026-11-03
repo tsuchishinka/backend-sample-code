@@ -34,9 +34,6 @@ class Handler(BaseHTTPRequestHandler):
         body = self.rfile.read(length)
         print(body.decode("utf-8", errors="replace"))
 
-        if self.path == "/":
-            status, headers, response_body = get_html()
-
         if self.path == "/api/status":
             status, headers, response_body = get_api_status()
 
